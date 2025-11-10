@@ -5,61 +5,82 @@
   <title>Scarlett's Game Vault</title>
   <style>
     body {
-      background-color: #0f0f0f;
+      background-color: #121212;
       color: #f0f0f0;
       font-family: 'Segoe UI', sans-serif;
-      text-align: center;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
     header {
       background-color: #1f1f1f;
-      padding: 20px;
+      padding: 30px 20px;
     }
     h1 {
-      font-size: 2.5em;
-      color: #00ffcc;
+      font-size: 2.8em;
+      color: #00ffc8;
+      margin-bottom: 10px;
+    }
+    p.subtitle {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+    nav {
+      margin: 40px auto;
+      max-width: 1000px;
     }
     nav ul {
       list-style: none;
       padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
     }
     nav li {
-      margin: 10px 0;
+      margin: 0;
     }
     nav a {
-      color: #00ffcc;
+      display: block;
+      background-color: #00ffc8;
+      color: #121212;
       text-decoration: none;
-      font-size: 1.2em;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 0.95em;
+      transition: background-color 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      background-color: #00cfa0;
     }
     footer {
       background-color: #1f1f1f;
-      padding: 10px;
+      padding: 15px;
       font-size: 0.9em;
       color: #888;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>🎮 Scarlett's Game Vault</h1>
-    <p>Play anywhere. Stay unblocked. Game on.</p>
+    <p class="subtitle">100 games. No limits. Just play.</p>
   </header>
 
   <nav>
     <ul>
-      <li><a href="games/mario.html">Super Mario</a></li>
+      <li><a href="games/1v1lol.html">1v1.lol</a></li>
       <li><a href="games/2048.html">2048</a></li>
+      <li><a href="games/flappy.html">Flappy Bird</a></li>
+      <li><a href="games/slope.html">Slope</a></li>
       <li><a href="games/run3.html">Run 3</a></li>
+      <li><a href="games/mario.html">Super Mario</a></li>
       <li><a href="games/retro-bowl.html">Retro Bowl</a></li>
-    </ul>
-  </nav>
-
-  <footer>
-    <p>Made by Scarlett • Hosted on GitHub Pages</p>
-  </footer>
-</body>
-</html>
+      <li><a href="games/geometry.html">Geometry Dash</a></li>
+      <li><a href="games/bitlife.html">BitLife</a></li>
+      <li><a href="games/fruitninja.html">Fruit Ninja</a></li>
+      <li><a href="games/stack.html">Stack</a></li>
+      <li><a href="games/tetris.html">Tetris</a></li>
+      <li><a href="games/hexgl.html">HexGL</a></li>
+      <li><a href="games/spaceinvaders.html">Space Invaders</a></li>
+      <li><a href="games/templerun.html">Temple Run</a></li>
