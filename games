@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scarlett's Game Vault</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 30px 20px;
+    }
+    h1 {
+      font-size: 2.8em;
+      color: #00ffc8;
+      margin-bottom: 10px;
+    }
+    p.subtitle {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+    nav {
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+    nav li {
+      margin: 0;
+    }
+    nav a {
+      display: block;
+      background-color: #00ffc8;
+      color: #121212;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 0.95em;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #00cfa0;
+    }
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+    .game-frame {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    footer {
+      background-color: #1f1f1f;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #888;
+      margin-top: 40px;
+    }
+  </style>
+  <script>
+    function show
