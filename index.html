@@ -5,15 +5,15 @@
   <title>Scarlett's Game Vault</title>
   <style>
     body {
-      background-color: #121212;
-      color: #f0f0f0;
+      background-color: #111;
+      color: #eee;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
       text-align: center;
     }
     header {
-      background-color: #1f1f1f;
+      background-color: #222;
       padding: 30px 20px;
     }
     h1 {
@@ -27,13 +27,13 @@
     }
     nav {
       margin: 40px auto;
-      max-width: 1000px;
+      max-width: 1200px;
     }
     nav ul {
       list-style: none;
       padding: 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 10px;
     }
     nav li {
@@ -42,11 +42,11 @@
     nav a {
       display: block;
       background-color: #00ffc8;
-      color: #121212;
+      color: #111;
       text-decoration: none;
       padding: 10px;
       border-radius: 6px;
-      font-size: 0.95em;
+      font-size: 0.9em;
       transition: background-color 0.3s;
     }
     nav a:hover {
@@ -64,7 +64,7 @@
       display: block;
     }
     footer {
-      background-color: #1f1f1f;
+      background-color: #222;
       padding: 15px;
       font-size: 0.9em;
       color: #888;
@@ -82,55 +82,25 @@
 <body>
   <header>
     <h1>🎮 Scarlett's Game Vault</h1>
-    <p class="subtitle">10 games. Zero limits. Play on.</p>
+    <p class="subtitle">50 games. Zero limits. Play on.</p>
   </header>
 
   <nav>
     <ul>
-      <li><a href="#" onclick="showGame('g1v1')">1v1.lol</a></li>
-      <li><a href="#" onclick="showGame('g2048')">2048</a></li>
-      <li><a href="#" onclick="showGame('gflappy')">Flappy Bird</a></li>
-      <li><a href="#" onclick="showGame('gtetris')">Tetris</a></li>
-      <li><a href="#" onclick="showGame('gretro')">Retro Bowl</a></li>
-      <li><a href="#" onclick="showGame('gslope')">Slope</a></li>
-      <li><a href="#" onclick="showGame('grun3')">Run 3</a></li>
-      <li><a href="#" onclick="showGame('gpacman')">Pac-Man</a></li>
-      <li><a href="#" onclick="showGame('gchess')">Chess</a></li>
-      <li><a href="#" onclick="showGame('gwordle')">Wordle</a></li>
+      <!-- Game buttons -->
+      ${Array.from({ length: 50 }, (_, i) => {
+        const id = `g${i + 1}`;
+        return `<li><a href="#" onclick="showGame('${id}')">Game ${i + 1}</a></li>`;
+      }).join('\n')}
     </ul>
   </nav>
 
-  <!-- Embedded Games -->
-  <div id="g1v1" class="game-frame active">
-    <iframe src="https://1v1lol.org/"></iframe>
-  </div>
-  <div id="g2048" class="game-frame">
-    <iframe src="https://play2048.co/"></iframe>
-  </div>
-  <div id="gflappy" class="game-frame">
-    <iframe src="https://flappybird.io/"></iframe>
-  </div>
-  <div id="gtetris" class="game-frame">
-    <iframe src="https://tetris.com/play-tetris"></iframe>
-  </div>
-  <div id="gretro" class="game-frame">
-    <iframe src="https://retrobowl.me/"></iframe>
-  </div>
-  <div id="gslope" class="game-frame">
-    <iframe src="https://slopegame.io/"></iframe>
-  </div>
-  <div id="grun3" class="game-frame">
-    <iframe src="https://run3unblocked.com/"></iframe>
-  </div>
-  <div id="gpacman" class="game-frame">
-    <iframe src="https://www.google.com/logos/2010/pacman10-i.html"></iframe>
-  </div>
-  <div id="gchess" class="game-frame">
-    <iframe src="https://www.chess.com/play/online"></iframe>
-  </div>
-  <div id="gwordle" class="game-frame">
-    <iframe src="https://www.nytimes.com/games/wordle/index.html"></iframe>
-  </div>
+  <!-- Game frames -->
+  ${Array.from({ length: 50 }, (_, i) => {
+    const id = `g${i + 1}`;
+    const url = `https://ubg98.github.io/game${i + 1}/`; // Replace with real game URLs
+    return `<div id="${id}" class="game-frame${i === 0 ? ' active' : ''}"><iframe src="${url}"></iframe></div>`;
+  }).join('\n')}
 
   <footer>
     <p>Made by Scarlett • Hosted on GitHub Pages</p>
