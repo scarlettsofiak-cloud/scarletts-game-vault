@@ -52,6 +52,17 @@
     nav a:hover {
       background-color: #00cfa0;
     }
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+    .game-frame {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
     footer {
       background-color: #1f1f1f;
       padding: 15px;
@@ -60,27 +71,69 @@
       margin-top: 40px;
     }
   </style>
+  <script>
+    function showGame(id) {
+      document.querySelectorAll('.game-frame').forEach(frame => frame.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      window.scrollTo(0, 0);
+    }
+  </script>
 </head>
 <body>
   <header>
     <h1>🎮 Scarlett's Game Vault</h1>
-    <p class="subtitle">100 games. No limits. Just play.</p>
+    <p class="subtitle">10 games. Zero limits. Play on.</p>
   </header>
 
   <nav>
     <ul>
-      <li><a href="games/1v1lol.html">1v1.lol</a></li>
-      <li><a href="games/2048.html">2048</a></li>
-      <li><a href="games/flappy.html">Flappy Bird</a></li>
-      <li><a href="games/slope.html">Slope</a></li>
-      <li><a href="games/run3.html">Run 3</a></li>
-      <li><a href="games/mario.html">Super Mario</a></li>
-      <li><a href="games/retro-bowl.html">Retro Bowl</a></li>
-      <li><a href="games/geometry.html">Geometry Dash</a></li>
-      <li><a href="games/bitlife.html">BitLife</a></li>
-      <li><a href="games/fruitninja.html">Fruit Ninja</a></li>
-      <li><a href="games/stack.html">Stack</a></li>
-      <li><a href="games/tetris.html">Tetris</a></li>
-      <li><a href="games/hexgl.html">HexGL</a></li>
-      <li><a href="games/spaceinvaders.html">Space Invaders</a></li>
-      <li><a href="games/templerun.html">Temple Run</a></li>
+      <li><a href="#" onclick="showGame('g1v1')">1v1.lol</a></li>
+      <li><a href="#" onclick="showGame('g2048')">2048</a></li>
+      <li><a href="#" onclick="showGame('gflappy')">Flappy Bird</a></li>
+      <li><a href="#" onclick="showGame('gtetris')">Tetris</a></li>
+      <li><a href="#" onclick="showGame('gretro')">Retro Bowl</a></li>
+      <li><a href="#" onclick="showGame('gslope')">Slope</a></li>
+      <li><a href="#" onclick="showGame('grun3')">Run 3</a></li>
+      <li><a href="#" onclick="showGame('gpacman')">Pac-Man</a></li>
+      <li><a href="#" onclick="showGame('gchess')">Chess</a></li>
+      <li><a href="#" onclick="showGame('gwordle')">Wordle</a></li>
+    </ul>
+  </nav>
+
+  <!-- Embedded Games -->
+  <div id="g1v1" class="game-frame active">
+    <iframe src="https://1v1lol.org/"></iframe>
+  </div>
+  <div id="g2048" class="game-frame">
+    <iframe src="https://play2048.co/"></iframe>
+  </div>
+  <div id="gflappy" class="game-frame">
+    <iframe src="https://flappybird.io/"></iframe>
+  </div>
+  <div id="gtetris" class="game-frame">
+    <iframe src="https://tetris.com/play-tetris"></iframe>
+  </div>
+  <div id="gretro" class="game-frame">
+    <iframe src="https://retrobowl.me/"></iframe>
+  </div>
+  <div id="gslope" class="game-frame">
+    <iframe src="https://slopegame.io/"></iframe>
+  </div>
+  <div id="grun3" class="game-frame">
+    <iframe src="https://run3unblocked.com/"></iframe>
+  </div>
+  <div id="gpacman" class="game-frame">
+    <iframe src="https://www.google.com/logos/2010/pacman10-i.html"></iframe>
+  </div>
+  <div id="gchess" class="game-frame">
+    <iframe src="https://www.chess.com/play/online"></iframe>
+  </div>
+  <div id="gwordle" class="game-frame">
+    <iframe src="https://www.nytimes.com/games/wordle/index.html"></iframe>
+  </div>
+
+  <footer>
+    <p>Made by Scarlett • Hosted on GitHub Pages</p>
+  </footer>
+</body>
+</html>
